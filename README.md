@@ -37,13 +37,17 @@ Presented algorithm execute the standard procedure for creating occupancy grid m
  * [mapping.py](mapping.py) - mapping algorithm for the
  * [ex1.json](data/ex1.json), [ex2.json](data/ex2.json)  - files with example data
 ## :microscope: Tests ##
-<h2 align="left">ex1.json file </h1>
+<h2 align="left">ex1.json file </h2>
+<h3> roomSize=15, boxSize=0.1, probHit=0.9, probMiss=0.4</h3>
 <div align="center" id="ex1"> 
   <img src=images/ex1.png width="350" />
   &#xa0;
 </div>
 
-<h2 align="left">ex2.json file </h1>
+---
+
+<h2 align="left">ex2.json file </h2>
+<h3> roomSize=15, boxSize=0.1, probHit=0.9, probMiss=0.4</h3>
 <div align="center" id="ex2"> 
   <img src=images/ex2.png width="350" />
   &#xa0;
@@ -72,10 +76,8 @@ The algorithm required several parameters to work: box size, room size, probabil
   &#xa0;
 </div>
 
-* Each value of the box on the map represents the probability of an obstacle. The value equal to 0.5 is related to lack of knowledge about the field. Every value higher than 0.5 means, that there is higher probability of obstacle in this filed, and if the value is lower than 0.5, the field is assumed empty. The algorithm update each filed when new sensor reading appears. If the obstacle is detected, then the value is increasing logarithmically:
-$$
-value = value + log(probMiss / 1-probMiss)
-$$
+* Each value of the box on the map represents the probability of an obstacle. The value equal to 0.5 is related to lack of knowledge about the field. Every value higher than 0.5 means, that there is higher probability of obstacle in this filed, and if the value is lower than 0.5, the field is assumed empty. The algorithm update each filed when new sensor reading appears. If the obstacle is detected, then the value is increasing logarithmically:<center>value = value + log(probMiss / 1-probMiss)</center>Every field on the path between the robot and an obstacle is treated as empty so the probability is decreasing.<center>value = value + log(probMiss / 1-probMiss)</center>To prevent a situation that values are out of reasonable range a limit was included, setting the minimum value to 0 and maximum to 1. 
+
 ## :memo: License ##
 
 This project is under license from MIT.
@@ -87,32 +89,3 @@ Made with :heart: by <a href="https://github.com/KamilGos" target="_blank">Kamil
 &#xa0;
 
 <a href="#top">Back to top</a>
-
-
-
-<!-- ADDONS -->
-<!-- images -->
-<!-- <h2 align="left">1. Mechanics </h2>
-<div align="center" id="inventor"> 
-  <img src=images/model_1.png width="230" />
-  <img src=images/model_2.png width="236" />
-  <img src=images/model_3.png width="228" />
-  &#xa0;
-</div> -->
-
-<!-- one image -->
-<!-- <h2 align="left">2. Electronics </h1>
-<div align="center" id="electronics"> 
-  <img src=images/electronics.png width="500" />
-  &#xa0;
-</div> -->
-
-
-<!-- project dockerized -->
-<!-- <div align="center" id="status"> 
-  <img src="https://www.docker.com/sites/default/files/d8/styles/role_icon/public/2019-07/Moby-logo.png" alt="simulator" width="75" style="transform: scaleX(-1);"/>
-   <font size="6"> Project dockerized</font> 
-  <img src="https://www.docker.com/sites/default/files/d8/styles/role_icon/public/2019-07/Moby-logo.png" alt="simulator" width="75"/>
-  &#xa0;
-</div>
-<h1 align="center"> </h1> -->
