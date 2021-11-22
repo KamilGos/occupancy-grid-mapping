@@ -76,7 +76,7 @@ The algorithm required several parameters to work: box size, room size, probabil
   &#xa0;
 </div>
 
-* Each value of the box on the map represents the probability of an obstacle. The value equal to 0.5 is related to lack of knowledge about the field. Every value higher than 0.5 means, that there is higher probability of obstacle in this filed, and if the value is lower than 0.5, the field is assumed empty. The algorithm update each filed when new sensor reading appears. If the obstacle is detected, then the value is increasing logarithmically:<center>value = value + log(probMiss / 1-probMiss)</center>Every field on the path between the robot and an obstacle is treated as empty so the probability is decreasing.<center>value = value + log(probMiss / 1-probMiss)</center>To prevent a situation that values are out of reasonable range a limit was included, setting the minimum value to 0 and maximum to 1. 
+* Each value of the box on the map represents the probability of an obstacle. The value equal to 0.5 is related to lack of knowledge about the field. Every value higher than 0.5 means, that there is higher probability of obstacle in this filed, and if the value is lower than 0.5, the field is assumed empty. The algorithm update each filed when new sensor reading appears. If the obstacle is detected, then the value is increasing logarithmically:<center>value = value + log(probHit / 1-probHit)</center>Every field on the path between the robot and an obstacle is treated as empty so the probability is decreasing.<center>value = value + log(probMiss / 1-probMiss)</center>To prevent a situation that values are out of reasonable range a limit was included, setting the minimum value to 0 and maximum to 1. 
 
 ## :memo: License ##
 
