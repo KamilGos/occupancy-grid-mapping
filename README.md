@@ -5,7 +5,7 @@
   &#xa0;
 </div>
 
-<h1 align="center"> occupancy-grid-map </h1>
+<h1 align="center"> occupancy-grid-mapping </h1>
 <h2 align="center"> Occupancy grid mapping of the robot surrounding using the laser scans
  </h2>
 
@@ -13,7 +13,7 @@
 <p align="center">
   <img alt="Top language" src="https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python">
   <img alt="Status" src="https://img.shields.io/badge/Status-done-green?style=for-the-badge">
-  <img alt="Repository size" src="https://img.shields.io/github/languages/code-size/KamilGos/occupancy-grid-map?style=for-the-badge">
+  <img alt="Repository size" src="https://img.shields.io/github/languages/code-size/KamilGos/occupancy-grid-mapping?style=for-the-badge">
 </p>
 
 <!-- table of contents -->
@@ -57,10 +57,10 @@ Presented algorithm execute the standard procedure for creating occupancy grid m
 ## :checkered_flag: Starting ##
 ```bash
 # Clone this project
-$ git clone https://github.com/KamilGos/occupancy-grid-map
+$ git clone https://github.com/KamilGos/occupancy-grid-mapping
 
 # Access
-$ cd occupancy-grid-map
+$ cd occupancy-grid-mapping
 
 # Run the project
 $ sudo python3 mapping.py
